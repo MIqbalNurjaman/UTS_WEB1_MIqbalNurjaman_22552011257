@@ -1,0 +1,76 @@
+/* Body dan Background */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    background: url('images/bg1.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #f2f2f2;
+}
+
+/* Container Login */
+.login-container {
+    height: 100%;
+}
+
+/* Kotak Login */
+.login-box {
+    background-color: rgba(255, 255, 255, 0.85); /* Sedikit transparansi */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo Bunny */
+.bunny-logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Styling Input dan Icon */
+.input-group-text {
+    background-color: #f1f1f1;
+    border-right: none;
+}
+
+.form-control {
+    border-radius: 10px;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #004c8c;
+    border: none;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 1.1rem;
+}
+
+.btn-primary:hover {
+    background-color: #003366;
+}
+
+/* Tombol Mata untuk Password */
+.input-group-text i {
+    cursor: pointer;
+}
+
+/* Text Link */
+a {
+    color: #004c8c;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsif untuk tampilan desktop */
+@media (max-width: 1200px) {
+    .bunny-logo {
+        width: 120px;
+    }
+}

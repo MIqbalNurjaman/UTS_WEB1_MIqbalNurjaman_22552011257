@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - NewJeans Fans Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="icon" href="images/bunny.png">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <img src="images/bunny.png" alt="Logo" class="sidebar-logo">
+            <h5 class="sidebar-title">NewJeans Fans</h5>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#activity">Activity</a></li>
+            <li><a href="#merchandise">Merchandise</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="topbar">
+            <h2>Selamat datang di Fansite NewJeans!</h2>
+            <p>Selamat datang, Nikmati pengalaman menjelajahi informasi tentang girl group NewJeans!</p>
+        </div>
+
+        <!-- Dashboard Sections -->
+        <section id="home" class="section">
+            <h3>Home</h3>
+            <p>NewJeans adalah girl group yang debut di Korea Selatan pada tahun 2022 di bawah naungan ADOR.</p>
+
+            <div class="members">
+                <div class="member-card">
+                    <img src="images/minji.jpg" alt="Minji" class="member-img">
+                    <h5><a href="#" onclick="showProfile('Minji')">Minji</a></h5>
+                </div>
+                <div class="member-card">
+                    <img src="images/hani.jpg" alt="Hanni" class="member-img">
+                    <h5><a href="#" onclick="showProfile('Hanni')">Hanni</a></h5>
+                </div>
+                <div class="member-card">
+                    <img src="images/daniele.jpg" alt="Danielle" class="member-img">
+                    <h5><a href="#" onclick="showProfile('Danielle')">Danielle</a></h5>
+                </div>
+                <div class="member-card">
+                    <img src="images/haerin.jpg" alt="Haerin" class="member-img">
+                    <h5><a href="#" onclick="showProfile('Haerin')">Haerin</a></h5>
+                </div>
+                <div class="member-card">
+                    <img src="images/hyein.jpg" alt="Hyein" class="member-img">
+                    <h5><a href="#" onclick="showProfile('Hyein')">Hyein</a></h5>
+                </div>
+            </div>
+        </section>
+
+        <section id="activity" class="section">
+            <h3>Activity</h3>
+            <p>Jadwal kegiatan terbaru dari NewJeans.</p>
+            <div class="activity-card">
+                <h5>Konser NewJeans</h5>
+                <p>NewJeans akan mengadakan konser di Seoul, Busan, dan Daegu. Tanggal: 20 Desember 2024</p>
+                <p>Konser ini akan menampilkan lagu-lagu terbaru dari album mereka dan beberapa kolaborasi kejutan dengan artis lain.</p>
+            </div>
+            <div class="activity-card">
+                <h5>Variety Show</h5>
+                <p>NewJeans akan tampil di variety show populer "Running Man". Tanggal: 22 Desember 2024</p>
+                <p>Di episode ini, mereka akan berpartisipasi dalam berbagai permainan dan tantangan seru bersama para host.</p>
+            </div>
+            <div class="activity-card">
+                <h5>NewJeans Fashion Event</h5>
+                <p>NewJeans akan menghadiri acara peluncuran koleksi terbaru mereka bersama desainer ternama. Tanggal: 25 Desember 2024</p>
+                <p>Acara ini akan menampilkan gaya fashion anggota NewJeans serta wawancara eksklusif dengan media.</p>
+            </div>
+        </section>
+
+        <section id="merchandise" class="section">
+            <h3>Merchandise</h3>
+            <p>Belanja merchandise resmi NewJeans.</p>
+            <div class="merch-card">
+                <h5>NewJeans Premium Hoodie</h5>
+                <p>Deskripsi: Hoodie premium dengan desain logo NewJeans di bagian depan, warna hitam elegan.</p>
+                <p>Harga: Rp 499.000</p>
+            </div>
+            <div class="merch-card">
+                <h5>NewJeans Limited Edition Cap</h5>
+                <p>Deskripsi: Topi baseball dengan bordir logo NewJeans dan detail eksklusif di bagian belakang.</p>
+                <p>Harga: Rp 249.000</p>
+            </div>
+            <div class="merch-card">
+                <h5>NewJeans T-Shirt</h5>
+                <p>Deskripsi: Kaos putih dengan desain album terbaru mereka di bagian depan.</p>
+                <p>Harga: Rp 199.000</p>
+            </div>
+            <div class="merch-card">
+                <h5>NewJeans Custom Wristband</h5>
+                <p>Deskripsi: Gelang karet dengan logo NewJeans dan tanggal debut mereka sebagai detail.</p>
+                <p>Harga: Rp 99.000</p>
+            </div>
+        </section>
+
+        <!-- Logout Button -->
+        <a href="index.html" class="logout-btn btn btn-danger">Logout</a>
+    </div>
+
+    <!-- Modal Profile -->
+    <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="profileModalLabel">Profile Anggota</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="profileInfo">
+                    <!-- Profile Info will be inserted here dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function showProfile(member) {
+            var profiles = {
+                'Minji': {
+                    name: 'Minji',
+                    bio: 'Minji adalah leader dan vokalis utama dari NewJeans. Lahir pada 7 Mei 2004, dia dikenal dengan gaya panggung yang karismatik.',
+                    birthday: '7 Mei 2004',
+                    nationality: 'Korea Selatan'
+                },
+                'Hanni': {
+                    name: 'Hanni',
+                    bio: 'Hanni adalah main vocalist dan dancer di NewJeans. Ia lahir di Australia-Vietnam pada 6 Oktober 2004.',
+                    birthday: '6 Oktober 2004',
+                    nationality: 'Australia-Vietnam'
+                },
+                'Danielle': {
+                    name: 'Danielle',
+                    bio: 'Danielle adalah lead vocalist dan visual dari NewJeans. Lahir pada 11 April 2005 di Australia.',
+                    birthday: '11 April 2005',
+                    nationality: 'Australia-Korea Selatan'
+                },
+                'Haerin': {
+                    name: 'Haerin',
+                    bio: 'Haerin adalah sub-vocalist dan dancer di NewJeans. Ia dikenal dengan suaranya yang lembut dan penampilannya yang anggun.',
+                    birthday: '15 Mei 2006',
+                    nationality: 'Korea Selatan'
+                },
+                'Hyein': {
+                    name: 'Hyein',
+                    bio: 'Hyein adalah maknae dari NewJeans, yang dikenal dengan kemampuannya menari dengan penuh energi. Lahir pada 21 April 2008.',
+                    birthday: '21 April 2008',
+                    nationality: 'Korea Selatan'
+                }
+            };
+
+            var memberProfile = profiles[member];
+            if (memberProfile) {
+                var profileContent = `
+                    <strong>Nama:</strong> ${memberProfile.name} <br>
+                    <strong>Bio:</strong> ${memberProfile.bio} <br>
+                    <strong>Tanggal Lahir:</strong> ${memberProfile.birthday} <br>
+                    <strong>Kewarganegaraan:</strong> ${memberProfile.nationality} <br>
+                `;
+                document.getElementById('profileInfo').innerHTML = profileContent;
+                var profileModal = new bootstrap.Modal(document.getElementById('profileModal'));
+                profileModal.show();
+            }
+        }
+    </script>
+</body>
+</html>

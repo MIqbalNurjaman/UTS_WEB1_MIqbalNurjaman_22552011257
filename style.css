@@ -1,0 +1,105 @@
+/* Reset dan Style Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f9fc; /* Warna latar belakang yang bersih */
+    color: #333;
+}
+
+/* Header */
+.header {
+    background-color: #004c8c; /* Warna biru khas NewJeans */
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    border-bottom: 5px solid #f2f2f2;
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.header .tagline {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+/* Main Section */
+.container {
+    margin-top: 40px;
+}
+
+.text-description {
+    font-size: 1.2rem;
+    color: #444;
+}
+
+.text-description h2 {
+    font-size: 2rem;
+    color: #004c8c; /* Warna biru khas NewJeans */
+}
+
+.button-group .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.button-group .btn-primary {
+    background-color: #004c8c;
+    color: white;
+    border: none;
+}
+
+.button-group .btn-primary:hover {
+    background-color: #003366;
+}
+
+.button-group .btn-outline-primary {
+    border-color: #004c8c;
+    color: #004c8c;
+}
+
+.button-group .btn-outline-primary:hover {
+    background-color: #004c8c;
+    color: white;
+}
+
+/* Tombol Kembali */
+.btn-outline-primary {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.btn-outline-primary i {
+    margin-right: 5px;
+}
+
+/* Footer */
+.footer {
+    background-color: #004c8c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Styling Gambar */
+.attention-photo {
+    max-width: 90%;
+    border-radius: 10px;
+}
